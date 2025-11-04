@@ -1,5 +1,6 @@
 package controller;
 
+import db.DBConnection;
 import javafx.collections.ObservableList;
 import model.dto.RoomInfoDTO;
 
@@ -10,7 +11,7 @@ public class DashBoardController implements DashBoardService {
     @Override
     public void addRoomDetails(String roomId, String type, double pricePerNight, int maxGuests, boolean availability, String description, int floor) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_reservation_system", "root", "1234");
+            Connection connection = DBConnection.getInstance().getConnection();
 
             String SQL = "INSERT INTO rooms VALUES(?, ?, ?, ?, ?, ?, ?)";
 
@@ -48,7 +49,7 @@ public class DashBoardController implements DashBoardService {
         ObservableList<RoomInfoDTO> roomDetails = javafx.collections.FXCollections.observableArrayList();
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_reservation_system", "root", "1234");
+            Connection connection = DBConnection.getInstance().getConnection();
             String SQL = "SELECT * FROM rooms";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -76,7 +77,7 @@ public class DashBoardController implements DashBoardService {
     public void updateRoomDetails(String roomId, String type, double pricePerNight, int maxGuests, boolean availability, String description, int floor) {
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_reservation_system", "root", "1234");
+            Connection connection = DBConnection.getInstance().getConnection();
 
             String SQL = "UPDATE rooms SET type = ?, price_per_night = ?, max_guests = ?, availability = ?, description = ?, floor = ? WHERE room_id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
