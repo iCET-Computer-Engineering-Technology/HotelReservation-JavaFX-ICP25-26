@@ -30,5 +30,21 @@ public class DashBoardController {
             throw new RuntimeException(e);
         }
     }
+    public void deleteRoomDetails(String roomId) {
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_reservation_system", "root", "1234");
 
+            PreparedStatement pstm = connection.prepareStatement("DELETE FROM rooms WHERE room_id = ?");
+
+
+            pstm.setObject(1,roomId);
+            pstm.executeUpdate();
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
+

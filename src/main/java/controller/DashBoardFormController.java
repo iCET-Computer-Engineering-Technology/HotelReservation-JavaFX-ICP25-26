@@ -140,23 +140,8 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_reservation_system", "root", "1234");
-
-            PreparedStatement pstm = connection.prepareStatement("DELETE FROM rooms WHERE room_id = ?");
-
-
-
-            pstm.setObject(1, txtRoomId.getText());
-            pstm.executeUpdate();
-            clearFields();
-            loadRoomsDetails();
-
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        clearFields();
+        loadRoomsDetails();
     }
 
     @FXML
