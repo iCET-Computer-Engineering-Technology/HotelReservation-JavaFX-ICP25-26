@@ -140,6 +140,9 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+
+        DashBoardController dashBoardController = new DashBoardController();
+        dashBoardController.deleteRoomDetails(txtRoomId.getText());
         clearFields();
         loadRoomsDetails();
     }
