@@ -1,4 +1,4 @@
-package controller;
+package controller.dashBoard;
 
 import javafx.collections.ObservableList;
 import model.dto.RoomInfoDTO;

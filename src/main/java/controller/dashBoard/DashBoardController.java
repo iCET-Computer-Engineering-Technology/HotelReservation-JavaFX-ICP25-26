@@ -1,4 +1,4 @@
-package controller;
+package controller.dashBoard;
 
 import db.DBConnection;
 import javafx.collections.ObservableList;

@@ -1,4 +1,4 @@
-package controller;
+package controller.dashBoard;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,7 +14,6 @@ import javafx.util.Duration;
 import model.dto.RoomInfoDTO;
 
 import java.net.URL;
-import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
