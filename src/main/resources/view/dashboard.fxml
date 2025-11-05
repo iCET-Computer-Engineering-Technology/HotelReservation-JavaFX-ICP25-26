@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="639.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+<AnchorPane prefHeight="669.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
-      <TableView fx:id="tblRoomInfo" layoutX="45.0" layoutY="94.0" prefHeight="321.0" prefWidth="894.0">
+      <TableView fx:id="tblRoomInfo" layoutX="28.0" layoutY="93.0" prefHeight="321.0" prefWidth="894.0">
         <columns>
           <TableColumn fx:id="colRoomId" prefWidth="71.20000839233398" text="RoomID" />
           <TableColumn fx:id="colType" prefWidth="94.39999389648438" text="Type" />
@@ -23,33 +23,50 @@
             <TableColumn fx:id="colFloor" prefWidth="108.0" text="Floor" />
         </columns>
       </TableView>
-      <Button fx:id="btnReload" layoutX="822.0" layoutY="534.0" mnemonicParsing="false" onAction="#btnReloadOnAction" prefHeight="26.0" prefWidth="100.0" text="RELOAD" />
-      <TextField fx:id="txtRoomId" layoutX="45.0" layoutY="434.0" promptText="RoomID" />
-      <TextField fx:id="txtPricePerNight" layoutX="45.0" layoutY="511.0" promptText="Price per Night" />
-      <TextField fx:id="txtDescription" layoutX="221.0" layoutY="511.0" prefHeight="86.0" prefWidth="339.0" promptText="Description" />
-      <ComboBox fx:id="cmbType" layoutX="45.0" layoutY="471.0" prefWidth="150.0" promptText="Type" />
-      <ComboBox fx:id="cmbMaxGuests" layoutX="220.0" layoutY="433.0" prefWidth="150.0" promptText="Max Guests" />
-      <ComboBox fx:id="cmbFloor" layoutX="399.0" layoutY="434.0" prefWidth="150.0" promptText="Floor" />
-      <RadioButton fx:id="radioAvailable" layoutX="327.0" layoutY="475.0" mnemonicParsing="false" text="Available" />
-      <RadioButton fx:id="radioUnavailable" layoutX="431.0" layoutY="475.0" mnemonicParsing="false" text="Unavailable" />
-      <Text layoutX="221.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability :" wrappingWidth="83.20000000000005">
+      <Button fx:id="btnReload" layoutX="805.0" layoutY="574.0" mnemonicParsing="false" onAction="#btnReloadOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #3e51c9;" text="RELOAD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtRoomId" layoutX="14.0" layoutY="432.0" prefHeight="26.0" prefWidth="206.0" promptText="RoomID" />
+      <TextField fx:id="txtPricePerNight" layoutX="14.0" layoutY="474.0" prefHeight="26.0" prefWidth="206.0" promptText="Price per Night" />
+      <TextField fx:id="txtDescription" layoutX="14.0" layoutY="552.0" prefHeight="110.0" prefWidth="446.0" promptText="Description" />
+      <ComboBox fx:id="cmbType" layoutX="240.0" layoutY="474.0" prefHeight="26.0" prefWidth="206.0" promptText="Type" />
+      <ComboBox fx:id="cmbMaxGuests" layoutX="470.0" layoutY="432.0" prefHeight="26.0" prefWidth="206.0" promptText="Max Guests" />
+      <ComboBox fx:id="cmbFloor" layoutX="240.0" layoutY="432.0" prefHeight="26.0" prefWidth="206.0" promptText="Floor" />
+      <RadioButton fx:id="radioAvailable" layoutX="120.0" layoutY="525.0" mnemonicParsing="false" text="Available" />
+      <RadioButton fx:id="radioUnavailable" layoutX="224.0" layoutY="525.0" mnemonicParsing="false" text="Unavailable" />
+      <Text layoutX="14.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability :" wrappingWidth="83.20000000000005">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Button fx:id="btnAdd" layoutX="822.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="100.0" text="ADD" />
-      <Button fx:id="btnDelete" layoutX="822.0" layoutY="498.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="100.0" text="DELETE" />
-      <Button fx:id="btnUpdate" layoutX="822.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="100.0" text="UPDATE" />
-      <Text layoutX="341.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel Reservation System">
+      <Button fx:id="btnAdd" layoutX="805.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #20fc03;" text="ADD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnDelete" layoutX="805.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #fc0303;" text="DELETE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnUpdate" layoutX="805.0" layoutY="502.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #fc8c03;" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text layoutX="324.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel Reservation System">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="813.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Information">
+      <Text layoutX="796.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Information">
          <font>
             <Font name="System Italic" size="15.0" />
          </font>
       </Text>
-      <Button layoutX="822.0" layoutY="570.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="100.0" text="CLEAR" />
+      <Button layoutX="805.0" layoutY="610.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #f7ff03;" text="CLEAR">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text fx:id="txtTime" layoutX="840.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05:04:25 PM" />
+      <Text fx:id="txtDate" layoutX="805.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01st November 2025" />
    </children>
 </AnchorPane>
